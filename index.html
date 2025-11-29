@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Personal Website Landing Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#FF3B81",
+              "background-light": "#fefcff",
+              "background-dark": "#0B0A0F",
+              "funky-yellow": "#F7FF00",
+              "funky-blue": "#3B47FF",
+              "funky-purple": "#A43BFF",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light font-display text-gray-800">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="absolute inset-0 z-0 h-full w-full bg-white">
+<div class="absolute h-full w-full bg-grid-teal-100/50 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+<div class="absolute -top-1/4 -left-1/4 h-1/2 w-1/2 rounded-full bg-cyan-200/50 blur-3xl"></div>
+<div class="absolute top-0 right-0 h-3/5 w-2/5 rounded-bl-full bg-pink-200/50 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 h-2/5 w-3/5 rounded-tr-full bg-amber-200/50 blur-3xl"></div>
+<div class="absolute -bottom-1/4 -right-1/4 h-1/2 w-1/2 rounded-full bg-purple-200/50 blur-3xl"></div>
+<svg class="absolute top-10 left-10 w-28 h-28 text-cyan-400 opacity-20 transform -rotate-12" fill="none" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+<rect height="80" rx="40" width="100" x="50" y="70"></rect>
+<circle cx="80" cy="110" r="15"></circle>
+<circle cx="120" cy="110" r="15"></circle>
+<line x1="80" x2="120" y1="110" y2="110"></line>
+<path d="M 75,70 Q 50,40 25,50"></path>
+<path d="M 125,70 Q 150,40 175,50"></path>
+<line x1="60" x2="40" y1="150" y2="170"></line>
+<line x1="140" x2="160" y1="150" y2="170"></line>
+</g>
+</svg>
+<svg class="absolute bottom-16 right-16 w-32 h-32 text-pink-400 opacity-20 transform rotate-12" fill="none" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+<path d="M 100,20 L 170,120 L 140,180 L 60,180 L 30,120 Z"></path>
+<circle cx="80" cy="100" r="12"></circle>
+<circle cx="120" cy="100" r="12"></circle>
+<path d="M 170,120 Q 190,100 180,80"></path>
+<path d="M 30,120 Q 10,100 20,80"></path>
+<line x1="65" x2="45" y1="180" y2="195"></line>
+<line x1="135" x2="155" y1="180" y2="195"></line>
+</g>
+</svg>
+</div>
+<div class="layout-container flex h-full grow flex-col z-10">
+<main class="flex flex-1 items-center justify-center py-10 lg:py-20">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1 px-4 md:px-8">
+<div class="@container mb-12">
+<div class="flex flex-col gap-8 px-4 py-10 @[864px]:flex-row-reverse @[864px]:items-center">
+<div class="flex-shrink-0 mx-auto @[864px]:mx-0">
+<div class="relative group">
+<div class="absolute -inset-0.5 bg-gradient-to-r from-funky-purple via-primary to-funky-yellow rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative w-48 h-48 bg-center bg-no-repeat bg-cover rounded-full shadow-lg @[480px]:w-56 @[480px]:h-56 ring-4 ring-white" data-alt="A portrait of the user or an abstract avatar" style='background-image: url("./me.jpeg");'></div>
+</div>
+</div>
+<div class="flex flex-col gap-6 @[480px]:gap-8 @[864px]:justify-center items-center @[864px]:items-start flex-1">
+<div class="flex flex-col gap-2 text-center @[864px]:text-left">
+<h1 class="text-gray-900 text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl">
+                                        Tony
+                                    </h1>
+<h2 class="text-gray-600 text-base font-normal leading-normal @[480px]:text-lg">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-200/60 text-amber-800 rounded-full text-sm @[480px]:text-base font-medium">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M14.243 5.757a6 6 0 10-8.486 8.486 6 6 0 008.486-8.486zM12.828 7.172a4 4 0 00-5.656 5.656 4 4 0 005.656-5.656zM8 12a2 2 0 114 0 2 2 0 01-4 0z"></path></svg>
+                                            Data Plumber</span> | I write code sometimes...
+                                    </h2>
+</div>
+<a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 @[480px]:h-14 @[480px]:px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] @[480px]:text-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-primary/30" href="https://github.com/anthonyc-r">
+<span class="truncate">View My GitHub</span>
+</a>
+</div>
+</div>
+</div>
+<div class="w-full">
+<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex w-full items-stretch p-4 gap-6 flex-nowrap">
+<div class="flex h-full flex-1 flex-col justify-between gap-4 rounded-xl min-w-full md:min-w-80 bg-white/70 backdrop-blur-sm p-6 border-2 border-funky-purple/80 shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+<p class="text-gray-800 text-base font-medium leading-normal">"Sometimes it is the people no one can imagine anything of who do the things no one can imagine."</p>
+<p class="text-funky-purple text-sm font-bold leading-normal">- Alan Turing</p>
+</div>
+<div class="flex h-full flex-1 flex-col justify-between gap-4 rounded-xl min-w-full md:min-w-80 bg-white/70 backdrop-blur-sm p-6 border-2 border-primary/80 shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+<p class="text-gray-800 text-base font-medium leading-normal">"The Analytical Engine has no pretensions whatever to originate anything. It can do whatever we know how to order it to perform... But it is likely to exert an indirect and reciprocal influence on science itself."</p>
+<p class="text-primary text-sm font-bold leading-normal">- Ada Lovelace</p>
+</div>
+<div class="flex h-full flex-1 flex-col justify-between gap-4 rounded-xl min-w-full md:min-w-80 bg-white/70 backdrop-blur-sm p-6 border-2 border-funky-blue/80 shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+<p class="text-gray-800 text-base font-medium leading-normal">"The idea of copyright did not exist in ancient times, when authors frequently copied other authors at length in works of non-fiction. This practice was useful, and is the only way many authors' works have survived even in part."</p>
+<p class="text-funky-blue text-sm font-bold leading-normal">- Richard Stallman</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+<p class="text-gray-500 text-sm font-normal leading-normal">© 2024 Tony. All rights reserved.</p>
+</footer>
+</div>
+</div>
+</body></html>
