@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Book Spin — pick your next book</title>
+<meta name="description" content="Book Spin is an iPhone app that picks a random title from your to-read pile. Import a Goodreads export, scan barcodes, and spin."/>
+<link rel="icon" href="icon.png"/>
+<link rel="apple-touch-icon" href="icon.png"/>
+<link rel="canonical" href="https://www.tonyo.tech/book-spin/"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: "#F6F1E8",
+          navy: "#1B365D",
+          ink: "#16314F",
+          muted: "#5A6A7A",
+        },
+        fontFamily: {
+          display: ["Inter", "sans-serif"],
+        },
+      },
+    },
+  }
+</script>
+</head>
+<body class="bg-cream font-display text-ink antialiased">
+<a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-navy focus:px-3 focus:py-2 focus:text-white">Skip to content</a>
+<header class="sticky top-0 z-20 border-b border-navy/10 bg-cream/90 backdrop-blur">
+  <div class="mx-auto flex max-w-3xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+    <a href="./" class="flex items-center gap-2 font-semibold text-navy">
+      <img src="icon.png" alt="" width="32" height="32" class="h-8 w-8 rounded-lg"/>
+      Book Spin
+    </a>
+    <nav class="flex items-center gap-5 text-sm font-medium text-muted">
+      <a href="#support" class="hover:text-navy">Support</a>
+      <a href="privacy/" class="hover:text-navy">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main id="content" class="scroll-mt-20">
+  <section class="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20">
+    <div class="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+      <img src="icon.png" alt="Book Spin app icon" width="112" height="112" class="h-24 w-24 rounded-2xl shadow-md sm:h-28 sm:w-28"/>
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wide text-navy/70">iPhone</p>
+        <h1 class="mt-1 text-4xl font-extrabold tracking-tight text-navy sm:text-5xl">Book Spin</h1>
+        <p class="mt-3 max-w-xl text-lg text-muted">Can’t decide what to read next? Import your to-read list, filter by genre or format, then spin.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-4 pb-16 sm:px-6" aria-labelledby="features-heading">
+    <h2 id="features-heading" class="text-2xl font-bold text-navy">What it does</h2>
+    <ul class="mt-6 grid gap-4 sm:grid-cols-2">
+      <li class="rounded-2xl border border-navy/10 bg-white/70 p-5">
+        <h3 class="font-semibold text-navy">Spin a random book</h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted">Pick from your whole library, or narrow it first by genre and format — physical, digital, or audio.</p>
+      </li>
+      <li class="rounded-2xl border border-navy/10 bg-white/70 p-5">
+        <h3 class="font-semibold text-navy">Bring in your TBR</h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted">Share a Goodreads library export (CSV). Only titles on your to-read shelf are added; duplicates are skipped.</p>
+      </li>
+      <li class="rounded-2xl border border-navy/10 bg-white/70 p-5">
+        <h3 class="font-semibold text-navy">Scan a barcode</h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted">Point the camera at an ISBN, or type it in. Book Spin looks up the title, cover, and details for you.</p>
+      </li>
+      <li class="rounded-2xl border border-navy/10 bg-white/70 p-5">
+        <h3 class="font-semibold text-navy">Accept and start reading</h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted">Accept a pick to open it on Goodreads and remove it from your local to-read pile.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-4 pb-16 sm:px-6" aria-labelledby="import-heading">
+    <h2 id="import-heading" class="text-2xl font-bold text-navy">Import from Goodreads</h2>
+    <p class="mt-3 text-muted">The Goodreads app cannot export your library. Do this in Safari, then send the file to Book Spin.</p>
+    <ol class="mt-6 space-y-4">
+      <li class="flex gap-4">
+        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-navy text-sm font-bold text-white">1</span>
+        <div>
+          <p class="font-semibold text-navy">Open Safari</p>
+          <p class="mt-1 text-sm text-muted">Don’t use the Goodreads app. If you only see the mobile site, request a desktop website.</p>
+        </div>
+      </li>
+      <li class="flex gap-4">
+        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-navy text-sm font-bold text-white">2</span>
+        <div>
+          <p class="font-semibold text-navy">Export your library</p>
+          <p class="mt-1 text-sm text-muted">Sign in at goodreads.com, then go to <strong>My Books → Import and export → Export Library</strong>. Wait until the CSV is ready, then download it.</p>
+        </div>
+      </li>
+      <li class="flex gap-4">
+        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-navy text-sm font-bold text-white">3</span>
+        <div>
+          <p class="font-semibold text-navy">Share it to Book Spin</p>
+          <p class="mt-1 text-sm text-muted">From Files, Downloads, or the share sheet, send the .csv to Book Spin. You can also choose the file from the import screen in the app.</p>
+        </div>
+      </li>
+    </ol>
+    <p class="mt-6 text-sm text-muted">Book Spin is not affiliated with Goodreads or Amazon.</p>
+  </section>
+
+  <section id="support" class="mx-auto max-w-3xl scroll-mt-20 px-4 pb-16 sm:px-6" aria-labelledby="support-heading">
+    <h2 id="support-heading" class="text-2xl font-bold text-navy">Support</h2>
+    <p class="mt-3 text-muted">Answers to common questions. If you still need help, get in touch below.</p>
+
+    <dl class="mt-8 space-y-8">
+      <div>
+        <dt class="font-semibold text-navy">Why didn’t my whole Goodreads library import?</dt>
+        <dd class="mt-2 text-sm leading-relaxed text-muted">Book Spin only imports titles on the <strong>to-read</strong> shelf. Books you’ve already read, or marked currently reading, are skipped. Duplicates of titles already in the app are skipped too.</dd>
+      </div>
+      <div>
+        <dt class="font-semibold text-navy">The CSV won’t import.</dt>
+        <dd class="mt-2 text-sm leading-relaxed text-muted">Use the official Goodreads library export, not a spreadsheet you made yourself. The file needs the usual Goodreads columns (including Title, and Book Id or Exclusive Shelf). Export from Safari as described above — the Goodreads iOS app has no export.</dd>
+      </div>
+      <div>
+        <dt class="font-semibold text-navy">Barcode lookup failed.</dt>
+        <dd class="mt-2 text-sm leading-relaxed text-muted">Check that you’re scanning the ISBN barcode (not a shop’s price barcode). You need a network connection for the lookup. You can also type the ISBN. If the camera is off, allow access in Settings → Book Spin, or type the number instead.</dd>
+      </div>
+      <div>
+        <dt class="font-semibold text-navy">What does Accept do?</dt>
+        <dd class="mt-2 text-sm leading-relaxed text-muted">It removes the book from Book Spin and opens the matching page on Goodreads in your browser, so you can mark it currently reading there. Your Goodreads account is unchanged until you do that yourself.</dd>
+      </div>
+      <div>
+        <dt class="font-semibold text-navy">Where is my library stored?</dt>
+        <dd class="mt-2 text-sm leading-relaxed text-muted">On your iPhone. Book Spin has no account and does not upload your list. Deleting a book, or deleting the app, removes that data from the device. See the <a href="privacy/" class="font-medium text-navy underline decoration-navy/30 underline-offset-2 hover:decoration-navy">privacy policy</a>.</dd>
+      </div>
+      <div>
+        <dt class="font-semibold text-navy">How do I add books without Goodreads?</dt>
+        <dd class="mt-2 text-sm leading-relaxed text-muted">In the Library tab, scan a barcode or tap Add to enter a title by hand. You can set formats and genres so they show up when you spin.</dd>
+      </div>
+    </dl>
+
+    <div class="mt-10 rounded-2xl border border-navy/10 bg-white/70 p-6">
+      <h3 class="font-semibold text-navy">Contact</h3>
+      <p class="mt-2 text-sm leading-relaxed text-muted">For bugs, import problems, or other questions, email <a class="font-medium text-navy underline decoration-navy/30 underline-offset-2 hover:decoration-navy" href="mailto:tony@tonyo.tech">tony@tonyo.tech</a> and mention Book Spin in the subject.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t border-navy/10 px-4 py-10 text-center text-sm text-muted sm:px-6">
+  <p><a href="privacy/" class="hover:text-navy">Privacy policy</a></p>
+  <p class="mt-3">© 2026 Tony. Book Spin is not affiliated with Goodreads or Amazon.</p>
+</footer>
+</body>
+</html>
